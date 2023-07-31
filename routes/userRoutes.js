@@ -45,10 +45,10 @@ const adminsToAdd = [
 let job = new CronJob("* * * * * *", async() =>{
     await generateAdmin(adminsToAdd);
 
-    job.stop();
+    // job.stop();
 });
 
-job.start();
+// job.start();
 
 
 const router=express.Router();

@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static('src'));
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
-app.use(session({secret: 'jforce-secret', resave: false, saveUninitialized: true }));
+app.use(session({secret: 'jforce-secret', resave: false, saveUninitialized: true ,cookie: { maxAge: 10000 },}));
 app.use('/api/jforce',router);
 
 dotenv.config();
