@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #screen{
+            width:100%;
+            height:100vh;
+            /* border:2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #body{
+            width:40%;
+            height:500px;
+            border:1px solid lightgray;
+            box-shadow: 5px 10px 15px lightgrey;
+            padding: 10px;
+        }
+        #body>h1{
+            font-size: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #body>form{
+            width:100%;
+            height:100%;
+
+        }
+        #body>form>input{
+            height:40px;
+            width:100%;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border:1px solid lightgray;
+            outline: none;
+        }
+        #body>form>input:nth-child(6){
+            background-color: purple;
+            color:white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="body">
+            <h1>User Register</h1>
+            <form action="" method="post">
+                <input type="text" name="name" placeholder="USERNAME"/>
+                <input type="email" name="email" placeholder="EMAIL ID"/>
+                <input type="password" name="password" placeholder="PASSWORD"/>
+                <input type="password" name="confirmpassword" placeholder="CONFIRM PASSWORD"/>
+                <input type="number" name="number" placeholder="PHONE NO."/>
+                <input type="submit" value="register"/>
+            </form>
+        </div>
+        <div id="success-message"></div>
+        <div id="error-message"></div>
+    </div>
+
+   
+    <!-- <script>
+        async function register(event){
+            event.preventDefault();
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+            let confirmpassword=document.getElementById("confirmpassword").value;
+
+            const data=await fetch("http://localhost:1000/fetch/register",{
+                method:"POST",
+                headers:{
+                    'Content-type':'application/json; charset=UTF-8'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password
+                })
+            });
+            let response=await data.json();
+            // alert(response.message);
+
+
+            let div=document.getElementById("message");
+            divstructure = `<h1>${response.message}</h1>`
+            div.innerHTML=divstructure;
+
+        }
+    </script> -->
+  
+
+
+</body>
+</html>
